@@ -45,9 +45,9 @@ class Compare:
         self.result = ""
         treads_n = multiprocessing.cpu_count()
         p = multiprocessing.Pool(treads_n)
-        print("[] Looking for unexpect manufacturer ...")
+        print("[] Looking for unexpected manufacturer ...")
         p.map(self.process_manufact, self.manufacts_s)
-        print("[] Looking for unexpect serials ...")
+        print("[] Looking for unexpected serials ...")
         p.map(self.process_serial, self.serials_s)
         p.close()
 
